@@ -1,0 +1,10 @@
+# Ignore environment variable file
+ids.env
+
+# Ignore virtual environment directory
+venv/
+
+# Ignore node_modules directory
+node_modules/ids.env
+venv/ echo node_modules/
+venv/ echo node_modules/

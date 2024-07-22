@@ -1,0 +1,36 @@
+--------------BACKEND--------------
+# Navigate to your backend directory
+cd /Users/blakekotter/Desktop/ZoomIntegrationAPI/backend
+
+# Create a virtual environment
+python3 -m venv venv
+
+# Activate the virtual environment
+source venv/bin/activate  
+# On macOS/Linux
+
+# .\venv\Scripts\activate  # On Windows
+
+# Install required packages within the virtual environment
+pip install flask flask-cors python-dotenv requests
+
+# Run your Flask application
+python app.py
+
+
+--------------FRONTEND--------------
+# Navigate to your project directory
+cd /path/to/your/project
+
+# Create a new frontend directory if it doesn't exist and navigate into it
+mkdir -p frontend
+cd frontend
+
+# Create a new React app
+npx create-react-app .
+
+# Install Axios for HTTP requests
+npm install axios
+
+# Start the React development server
+npm start
