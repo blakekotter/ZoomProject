@@ -94,12 +94,14 @@ function Search() {
               className={`search-input ${nameError ? 'error' : ''}`}
             />
             {query && <button type="button" className="clear-button" onClick={() => setQuery('')}>×</button>}
-            {nameError && (
-              <div className="error-message">
-                <img src="/error.png" alt="Error" />
-                Participant not found.
-              </div>
-            )}
+            <div className="error-space">
+              {nameError && (
+                <div className="error-message">
+                  <img src="/error.png" alt="Error" />
+                  Participant not found.
+                </div>
+              )}
+            </div>
           </div>
           <button type="submit" className="search-button">Search</button>
           <button type="button" className="filter-button" onClick={() => setAdvancedSearch(!advancedSearch)}>
@@ -132,15 +134,17 @@ function Search() {
                 }}
                 className={`search-input ${dateNotFoundError ? 'error' : ''}`}
               />
-            </div>
-            {dateNotFoundError && (
-              <div className="error-message">
-                <img src="/error-icon.png" alt="Error" />
-                No recordings found for the selected date range.
+              <div className="error-space">
+                {dateNotFoundError && (
+                  <div className="error-message">
+                    <img src="/error-icon.png" alt="Error" />
+                    No recordings found for the selected date range.
+                  </div>
+                )}
               </div>
-            )}
+            </div>
             <button type="button" className="clear-search-button" onClick={clearSearch}>
-              Clear Filters
+              Clear All Filters
             </button>
           </div>
         )}
